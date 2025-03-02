@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الحزم والعروض - منتجع هول إن ون</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>الحزم والعروض</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="about.html">حول المنتجع</a>
+        <a href="facilities.html">المرافق والخدمات</a>
+        <a href="packages.html">الحزم والعروض</a>
+        <a href="gallery.html">معرض الصور</a>
+        <a href="contact.html">تواصل معنا</a>
+    </nav>
+    <div class="search-container">
+        <input type="text" id="search" placeholder="ابحث هنا...">
+        <button onclick="searchFunction()">بحث</button>
+    </div>
+
+    <div class="container">
+        <h2>اختر إحدى الحزم المتوفرة</h2>
+        <select id="packageSelect" onchange="showPackageDetails()">
+            <option value="">اختر الحزمة</option>
+            <option value="fiveRounds">خمس جولات</option>
+            <option value="threeRounds">الجولة الثلاثية</option>
+            <option value="relaxation">استراحة استجمام</option>
+            <option value="custom">حزمة مخصصة</option>
+        </select>
+
+        <div id="packageDetails" class="package-details"></div>
+
+        <div id="bookingSection" style="display: none;">
+            <button onclick="confirmBooking()">احجز الآن</button>
+        </div>
+
+        <div id="customPackageForm" style="display: none;">
+            <h3>يرجى تعبئة النموذج وسنتواصل معك لترتيب الحزمة المخصصة</h3>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="الاسم" required>
+                <input type="tel" id="phone" placeholder="رقم الهاتف" required>
+                <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+                <textarea id="message" placeholder="التفاصيل المطلوبة" required></textarea>
+                <button type="button" onclick="submitCustomPackage()">إرسال الطلب</button>
+            </form>
+        </div>
+
+        <h2>معرض صور الحزم</h2>
+        <div class="image-gallery">
+            <img src="حزمة_1.jpg" alt="حزمة خمس جولات">
+            <img src="حزمة_2.jpg" alt="حزمة الجولة الثلاثية">
+            <img src="حزمة_3.jpg" alt="حزمة استراحة استجمام">
+            <img src="حزمة_4.jpg" alt="حزمة مخصصة">
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>للتواصل: info@holeinone.com | الهاتف: 123-456-789|&copy; 2025 جميع الحقوق محفوظة</p><p></p>
+        
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

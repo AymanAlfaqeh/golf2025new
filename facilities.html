@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المرافق والخدمات - منتجع هول إن ون</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>المرافق والخدمات</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="about.html">حول المنتجع</a>
+        <a href="facilities.html">المرافق والخدمات</a>
+        <a href="packages.html">الحزم والعروض</a>
+        <a href="gallery.html">معرض الصور</a>
+        <a href="contact.html">تواصل معنا</a>
+    </nav>
+    <div class="search-container">
+        <input type="text" id="search" placeholder="ابحث هنا...">
+        <button onclick="searchFunction()">بحث</button>
+    </div>
+
+    <div class="container">
+        <h2>اختر خدمة من القائمة</h2>
+        <select id="facilitySelect" onchange="showFacilityDetails()">
+            <option value="">اختر الخدمة</option>
+            <option value="golfCourse">ملاعب الجولف</option>
+            <option value="clubhouse">النوادي</option>
+            <option value="hotel">الإقامة في الفنادق</option>
+            <option value="restaurant">المطاعم والمقاهي</option>
+            <option value="proShop">متجر المحترفين</option>
+            <option value="training">ساحة التدريب ودروس الجولف</option>
+        </select>
+
+        <div id="facilityDetails" class="facility-details"></div>
+
+        <div id="subscribeSection" style="display: none;">
+            <button onclick="confirmSubscription()">اشترك الآن</button>
+        </div>
+    </div>
+
+    
+    <footer class="footer">
+        <p>للتواصل: info@holeinone.com | الهاتف: 123-456-789|&copy; 2025 جميع الحقوق محفوظة</p><p></p>
+        
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
